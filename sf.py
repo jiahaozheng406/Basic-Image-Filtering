@@ -110,8 +110,8 @@ def plot_images(original, smoothed, sharpened,save_path):
     plt.close()
 
 def main():
-    input_filename = r"D:\郑家浩\科研综述\PythonProject\标准测试图片\testpat.bmp" #
-    output_path = r'D:\郑家浩\科研综述\PythonProject\train'  # 定义输出
+    input_filename = os.path.join("images", "lenna.bmp")
+    output_path = os.path.join("train")
     try:
         # 提取文件名和扩展名
         base_name = os.path.basename(input_filename)
@@ -155,3 +155,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
