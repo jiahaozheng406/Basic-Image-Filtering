@@ -40,8 +40,8 @@ def plot_images(original, smoothed, sharpened, save_path):
 
 
 def main():
-    input_filename = r"D:\郑家浩\科研综述\PythonProject\标准测试图片\lenna.bmp"
-    output_path = r"D:\郑家浩\科研综述\PythonProject\train"
+    input_filename = os.path.join("images", "lenna.bmp")
+    output_path = os.path.join("train")
 
     # PIL读取图像
     pil_img = Image.open(input_filename).convert('RGB')
@@ -69,4 +69,5 @@ def main():
     plot_images(img_array, smoothed_img, sharpened_img, output_comparison)
 
 if __name__ == "__main__":
+
     main()
